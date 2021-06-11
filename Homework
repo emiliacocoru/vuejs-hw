@@ -1,0 +1,31 @@
+Create a user interface for a e-commerce merchant.
+
+Requirements:
+
+* App have to be implemented using Vue (v2 or v3).
+* App should have at least 2 views: a list of available products and a page for shopping cart. 
+* Use a Vue UI framework: Vuefity, Vue Material, Buefy, etc.
+* Your app should have a store (Vuex).
+* Link your app to a database implemented in previous courses and use a Web service.
+* Split your app in components.
+* Try to use the concepts discussed in the Vue course (the many, the better)
+
+
+Resources:
+
+* https://www.vuemastery.com/courses/real-world-vue-js/vue-cli/ 
+* Vue.js has awesome documentation: 
+	* Vue 2: https://vuejs.org/v2/guide/
+	* Vue 3: https://v3.vuejs.org/
+* UI frameworks:
+	* Vuetify: https://vuetifyjs.com/en/ (for Vue v2) or https://next.vuetifyjs.com/en/ (for Vue v3)
+	* Vue Material: https://vuematerial.io/
+	* Buefy: https://buefy.org/
+Vuex: https://vuex.vuejs.org/
+
+
+Bonus:
+
+* Add more views. For example, you can add login page, user information page, a page to show more details about a selected product, etc.
+* Use animations for a friendly interface.
+
