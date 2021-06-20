@@ -1,7 +1,7 @@
 <template>
     <div class="song" >
         <div class="song-info">
-            <span>{{ name }} by {{ singer}}</span>
+            <span>{{ title }} by {{ singer}}</span>
             <span>{{ price }} $</span>
         </div>
         <button @click="add">Add</button>
@@ -9,30 +9,29 @@
 </template>
 
 <script>
-
-export default {
-    name: 'Song',
-    props: {
-        name: {
-            type: String,
-            validator: (value) => value.length > 1
+    export default {
+        name: 'Song',
+        props: {
+            title: {
+                type: String,
+                validator: (value) => value.length > 1
+            },
+            singer: {
+                type: String,
+                validator: (value) => value.length > 1
+            },
+            price: {
+                type: String,
+                default: '0'
+            }
         },
-        singer: {
-            type: String,
-            validator: (value) => value.length > 1
-        },
-        price: {
-            type: String,
-            default: '0'
-        }
-    },
-    methods: {
-        add() {
-            const {name, singer, price} = this;
-            this.$emit('event-item', {name, singer, price});
+        methods: {
+            add() {
+                const {title, singer, price} = this;
+                this.$emit('event-item', {title, singer, price});
+            }
         }
     }
-}
 </script>
 
 <style scoped>
@@ -40,7 +39,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 150px;
+  width: 300px;
   height: 50px;
   padding: 10px;
   border: 1px solid purple;

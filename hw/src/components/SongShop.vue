@@ -8,7 +8,7 @@
 
         <div class="all-songs">
             <div class="song-info" v-for="(item, index) in items" :key="index">
-                <song :name="item.name" :singer="item.singer" :price="item.price"  @event-item="addToCart">
+                <song :title="item.title" :singer="item.singer.singerName" :price="parseInt(item.songId)"  @event-item="addToCart">
                 </song>
             </div>
         </div>  
@@ -16,31 +16,32 @@
 </template>
 
 <script>
-import Song from './Song.vue'
-import Cart from './Cart.vue'
+  import Song from './Song.vue'
+  import Cart from './Cart.vue'
 
-export default {
-  name: 'SongShop',
-  data() {
+  export default {
+    name: 'SongShop',
+    data() {
       return {
-          items: [
-            {name: "At My Worst", singer: "Pink Sweat$", price: 5},
-            {name: "Run", singer: "One Republic", price: 7},
-            {name: "Love to Lose", singer: "Sandro Cavazza, Georgia Ku", price: 7},
-          ],
-          songsInCart: []
+        songsInCart: []
       }
-  },
-  components: {
-    Song,
-    Cart
-  },
-  methods: {
-    addToCart(item) {
-        this.songsInCart.push(item);
+    },
+    computed: {
+      items() {
+        console.log("AICI" + this.$store.getters.cartItems.event);
+        return this.$store.getters.cartItems;
+    } 
+    },
+    components: {
+      Song,
+      Cart
+    },
+    methods: {
+      addToCart(item) {
+          this.songsInCart.push(item);
+      }
     }
   }
-}
 </script>
 
 <style scoped>

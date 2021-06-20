@@ -12,26 +12,24 @@
 </template>
 
 <script>
-
-export default {
-    name: 'Cart',
-    props: {
-        items: {
-            type: Array,
-            default: () => []
+    export default {
+        name: 'Cart',
+        props: {
+            items: {
+                type: Array,
+                default: () => []
+            },
         },
-    },
-    computed: {
-        nrSongs() {
-            return this.items.length;
-        },
-        totalPrice() {
-            return this.items.reduce((a, b) => a + b.price, 0);
+        computed: {
+            nrSongs() {
+                return this.items.length;
+            },
+            totalPrice() {
+                return this.items.reduce((a, b) => a + b.price, 0);
+            }
         }
     }
-}
 </script>
 
 <style scoped>
-
 </style>
