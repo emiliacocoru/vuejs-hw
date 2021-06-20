@@ -31,5 +31,5 @@ We are also sorry to have missed the deadline, but it was a busy period for all 
 ### Resources
 https://www.digitalocean.com/community/tutorials/how-to-build-a-shopping-cart-with-vue-3-and-vuex
 
-https://codesource.io/build-a-shopping-cart-with-vue-vuex-vue-material-design/# hw
+https://codesource.io/build-a-shopping-cart-with-vue-vuex-vue-material-design/#
 
